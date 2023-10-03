@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<htmlm lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Madlibs Game
+        </title>
+    </head>
+    <body>
+        <h1>
+            Madlibs Game
+        </h1>
+        <form method="POST" action="/result">
+            {% for prompt in prompts %}
+                <label for="{{ prompt }}">{{ prompt }}:</label>
+                <input type="text" name="{{ prompt }}" id="{{ prompt }}" required><br>
+            {% endfor %}
+            <button type="submit">Generate Story</button>
+        </form>
+    </body>
+</html>
